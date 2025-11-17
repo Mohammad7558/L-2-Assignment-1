@@ -92,15 +92,23 @@ function getUniqueValues(
   arr2: (string | number)[]
 ): (string | number)[] {
   const result: (string | number)[] = [];
+  const exists = (arr: (string | number)[], value: string | number): boolean => {
+    for (const item of arr) {
+      if (item === value) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   for (const val of arr1) {
-    if (!result.includes(val)) {
+    if (!exists(result, val)) {
       result.push(val);
     }
   }
 
   for (const val of arr2) {
-    if (!result.includes(val)) {
+    if (!exists(result, val)) {
       result.push(val);
     }
   }
@@ -109,6 +117,9 @@ function getUniqueValues(
 }
 
 
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+console.log(getUniqueValues(array1, array2));
 
 
 
