@@ -11,9 +11,6 @@ function formatValue(value: string | number | boolean): string | number | boolea
 
 
 
-
-
-
 function getLength(value: string | any[]): number {
   if (typeof value === "string") {
     return value.length;
@@ -23,10 +20,6 @@ function getLength(value: string | any[]): number {
   }
   return 0;
 }
-
-
-
-
 
 
 
@@ -49,10 +42,6 @@ class Person {
 
 
 
-
-
-
-
 interface Item {
   title: string;
   rating: number;
@@ -61,10 +50,6 @@ interface Item {
 function filterByRating(items: Item[]): Item[] {
   return items.filter((item) => item.rating >= 4);
 }
-
-
-
-
 
 
 
@@ -84,9 +69,6 @@ function filterActiveUsers(users: User[]): User[] {
 
 
 
-
-
-
 interface Book {
   title: string;
   author: string;
@@ -100,8 +82,6 @@ function printBookDetails(book: Book): void {
     `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availableText}`
   );
 }
-
-
 
 
 
